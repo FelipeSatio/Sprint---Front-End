@@ -1,0 +1,264 @@
+@font-face {
+    font-family: Quicksand-light;
+    src: url(../fonts/Quicksand-Light.ttf);
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ROOT */
+
+:root {
+    --height-full: 100vh;
+    --color-light: #f4f4f4;
+    --color-dark: #111111;
+    --color-blue: #0ea5e9;
+    --color-blue-dark: #0284c7;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+}
+
+/* HTML */
+
+html {
+    scroll-behavior: smooth;
+    font-family: Quicksand-light;
+}
+
+/* LISTAS */
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* LINKS */
+
+a {
+    color: var(--color-light);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a:hover {
+    color: var(--color-blue);
+}
+
+/* HERO */
+
+.hero {
+    color: var(--color-light);
+    background-image:
+    linear-gradient(to top,
+    rgba(0, 0, 0, .8),
+    rgba(0, 0, 0, .4)),
+    url(../images/camera-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: var(--height-full);
+}
+
+/* HEADER */
+
+.header-hero {
+    height: 100px;
+    padding-inline: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* MENU */
+
+.menu-hero-list {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+/* CTA */
+
+.cta {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 8vmin;
+    text-wrap: balance;
+}
+
+.cta p {
+    width: 70%;
+    text-wrap: balance;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* BOTÃO */
+
+.btn {
+    border: 2px solid var(--color-blue);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: 80px;
+    background-color: var(--color-blue);
+    transition: background-color .7s;
+}
+
+.btn:hover {
+    background-color: transparent;
+}
+
+/* SECTION */
+
+section {
+    padding: var(--spacing-lg);
+}
+
+/* CAMERAS */
+
+.cameras {
+    min-height: var(--height-full);
+    background-color: var(--color-dark);
+    padding: var(--spacing-lg);
+}
+
+.cameras h2 {
+    color: var(--color-light);
+    font-size: 6vmin;
+    text-align: center;
+}
+
+/* GRID CAMERAS */
+
+.grid-cameras {
+    width: 90%;
+    margin-inline: auto;
+    margin-block: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+/* ITEM CAMERA */
+
+.grid-cameras-item {
+    width: 30%;
+    border: 1px solid var(--color-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    color: var(--color-light);
+    padding: var(--spacing-md);
+}
+
+/* IMG CAMERA */
+
+.grid-cameras-item img {
+    width: 80%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* SOBRE */
+
+.box {
+    min-height: 60vh;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    text-align: center;
+}
+
+.box h2 {
+    font-size: 6vmin;
+}
+
+.box p {
+    width: 70%;
+    line-height: 1.6;
+}
+
+/* GALERIA */
+
+.galeria {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.galeria h2 {
+    text-align: center;
+    font-size: 6vmin;
+}
+
+/* GRID GALERIA */
+
+.grid-galeria {
+    width: 90%;
+    margin-inline: auto;
+    margin-top: var(--spacing-lg);
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.grid-galeria img {
+    width: 30%;
+    height: 250px;
+    object-fit: cover;
+    border: 2px solid var(--color-light);
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 900px) {
+
+    .header-hero {
+        flex-direction: column;
+        justify-content: center;
+        gap: var(--spacing-sm);
+    }
+
+    .menu-hero-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta p {
+        width: 90%;
+    }
+
+    .grid-cameras-item {
+        width: 100%;
+    }
+
+    .grid-galeria img {
+        width: 100%;
+    }
+
+    .form-contato {
+        width: 100%;
+    }
+
+}
