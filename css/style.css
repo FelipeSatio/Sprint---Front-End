@@ -166,14 +166,20 @@ section {
     gap: var(--spacing-md);
     color: var(--color-light);
     padding: var(--spacing-md);
+    transition: .8s;
+    border-radius: 8px;
 }
 
 /* IMG CAMERA */
 
+.grid-cameras-item:hover{
+    scale: 1.05;
+}
 .grid-cameras-item img {
     width: 80%;
     height: 250px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 /* SOBRE */
